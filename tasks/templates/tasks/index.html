@@ -1,8 +1,8 @@
-<h1>EatWith Task List!</h1>
+<center><h1>EatWith Task List!</h1></center>
 {% if task_list %}
     <ul>
-    {% for b in task_list %}
-        <li>{{b.task}} | {{b.person_in_charge}} | {{b.date_due}}</li>
+    {% for task in task_list %}
+        <li><b>{{task.type}}</b> : {{task.person_in_charge}} | <i>{{task.date_due}}</i></li>
     {% endfor %}
     </ul>
 {% else %}

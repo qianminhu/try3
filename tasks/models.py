@@ -19,3 +19,6 @@ class TaskType(models.Model):
     type = models.ForeignKey(CurrentTask)
     person_in_charge = models.ForeignKey(User)
     date_due = models.DateTimeField('date due')
+
+    def __unicode__(self):
+        return (self.type + ": " + self.person_in_charge)

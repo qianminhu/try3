@@ -5,7 +5,7 @@ from .models import CurrentTask, TaskType
 class TaskAdmin(admin.ModelAdmin):
     search_fields = ['task']
     list_filter = ['task']
-    list_display = ('task', 'frequency')
+    list_display = ('task', 'frequency', 'description')
 
 class TaskAdmin2(admin.ModelAdmin):
     search_fields = ['task']
